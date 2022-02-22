@@ -38,3 +38,16 @@ includes:
 
 The default RAM of the VM is 8192 MB. If your machine has less memory, use
 smaller value.
+
+The packages are built with `poudriere bulk` with `-C` flags, which removes
+built packages, if any, every time. To rebuild packages, run:
+
+```console
+vagrant provision
+```
+
+To destroy the VM, run:
+
+```console
+vagrant destroy
+```
