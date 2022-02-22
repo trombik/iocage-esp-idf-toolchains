@@ -33,20 +33,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Install python
-        uses: actions/setup-python@v2
-        with:
-          python-version: "3.8"
-
-      - name: Install ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 2.7
-          bundler-cache: true
-
       - name: Install ansible
         run: |
-          pip install --user ansible
+          pip3 install --user ansible
 
       - name: Cache vagrant boxes
         uses: actions/cache@v2
