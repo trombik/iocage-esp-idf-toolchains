@@ -59,7 +59,7 @@ jobs:
 
       - name: Install roles
         run: |
-          .local/bin/ansible-galaxy role install -r requirements.yml
+          ansible-galaxy role install -r requirements.yml
 
       - name: Run vagrant
         run: |
