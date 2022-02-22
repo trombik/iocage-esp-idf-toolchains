@@ -35,7 +35,7 @@ jobs:
 
       - name: Install ansible
         run: |
-          pip3 install --user ansible
+          pip3 install ansible
 
       - name: Cache vagrant boxes
         uses: actions/cache@v2
