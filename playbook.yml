@@ -54,7 +54,7 @@
       NOLINUX: "yes"
       PKG_REPO_SIGNING_KEY: /usr/local/etc/poudriere/keys/my.key
       CCACHE_DIR: /var/cache/ccache
-      ALLOW_MAKE_JOBS_PACKAGES: "{{ project_packages | join(' ') }}"
+      ALLOW_MAKE_JOBS_PACKAGES: "{{ project_packages | map('regex_replace', '(.*)', '\\1*') | join(' ') }}"
       FLAVOR_DEFAULT_ALL: "yes"
       USE_TMPFS: "no"
 
