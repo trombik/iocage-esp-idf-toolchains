@@ -1,0 +1,6 @@
+---
+roles:
+  - name: trombik.openntpd
+    version: 1.0.2
+  - name: trombik.git
+  - name: trombik.poudriere

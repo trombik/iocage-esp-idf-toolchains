@@ -1,0 +1,9 @@
+---
+
+- name: Dump all hostvars
+  debug: var=hostvars[inventory_hostname]
+
+- name: Install git
+  ansible.builtin.pkgng:
+    name: git-lite
+    state: present

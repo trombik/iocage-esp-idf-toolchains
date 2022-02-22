@@ -1,0 +1,7 @@
+---
+
+- name: Build packages
+  ansible.builtin.command: "poudriere bulk -j {{ item[0] | quote }} -p default -J {{ project_make_job_numbers | quote }} -b {{ project_binary_package_branch | quote }} -O xtensa_esp32_elf -O freebsd_ports_xtensa_lx106_elf -Ct {{ item[1] | quote }}"
+  with_nested:
+    - "{{ project_jails }}"
+    - "{{ project_packages }}"
