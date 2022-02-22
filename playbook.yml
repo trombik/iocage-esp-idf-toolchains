@@ -81,35 +81,3 @@
         method: http
         version: 12.3-RELEASE
         state: present
-
-    # openssl genrsa -out my.key 2048
-    # openssl rsa -in my.key -out my.pub -pubout
-    poudriere_pkg_repo_signing_key: |
-      -----BEGIN RSA PRIVATE KEY-----
-      MIIEpQIBAAKCAQEA3dcTI/jxZhbeKlZmd5bZnQPzywwFbTWF4SQJvhlaR8FJfgeE
-      8QM9axCNPkacCNkuSfsVXkKXSABqL8GYFUCUDz7PttQUoLx99qumltgRAwCz2NTC
-      wNYA9R10aJn9inGF4mXF9gXNNL+N+jYtndWQlMDevg2Alg8vOvoOX43vfbJrA4S2
-      BrE3y14M/rY8ZOag+yFHVSvM0kjX2ufXTPVKnNpb1PewKGstA1jTIx2YOxYuQf+U
-      hvl4D9UZ/Wzmr0hAVAjuntyvXKJIlQVMBLIQ3q7leMvQAFKNxecpUy12BrOdEnvc
-      4/u8YvauSCkTwhYUbrtu6k4gJlpPPiCxOemWywIDAQABAoIBAQCxjEVBcSijMII3
-      GFeCNzWLuXIRfFmLgl7YRmOVxey/qS8Msy/vRUyOt/yTbyfK3SdzBoWfn2Q8uDhE
-      aIkz2S+m0/qitTKdQr7+AXufFubmpFVMoVwNwjmZ9C0K2tRVTW5+OD4sHZCTOwyC
-      yYHQ5PCGXaboLR5Q+24toZyHVa3rxra625VlhvaMgyi4iQxmBGtcw6lubYfrUPGp
-      jhdqpmuiJ1/045A6klxn8bhLgtB7wamZN79YGeyobXrhRiH0zhGM9Z+PChBaAnx6
-      3a9KuYIg5wAbBvvxGXIE7sIgl/yfLvmMHekIaVd1UCuPQ95Lq7fLDs+sseZOk6y1
-      y2IeX5PhAoGBAPZfR9Xdv5Kw8zQjc6X7Am28nD0kx66UH0PNiTxIHEifZO4w9FAJ
-      TcGn8LZqeFgGwpQcik8Y5yzevmvXAht6K/9ZSfIYplmx5vMrSbxzx1T5eUF/wWGm
-      6YmNu7g2iE1QMdlAOvOHOOFbLHvD7/xLfOtDwyTVUi7pcwQm3s7k49lFAoGBAOaC
-      X9HiLDZfnd+I4rUblQx8bj8GyyCj1PtpiXjyx8IW+sblkoyBawvXWGozVHdc3VPZ
-      0ig0kjjAPMqyvaHJIXRyIX63orUm0rqmkvZ3v5W3hWetViUPm6SWB9ZR/XkwbXU1
-      S169j+v2jZ1J1WvNnskzXxUFnLdF38zUuU3po8jPAoGBANX/SulEFGu5UXY/OOu6
-      DJD+3ALsGJnWRRXiyMpYpGCcOtH+Kaf/fM+yLQ51ipSDQq3d4HD1448A5wvKlSUC
-      yIaiqu0jZhLQyRb8ya5sLn7rttwiuPk2PvHg72YB0AC/oJzhApOXJ9vvEsNqHODb
-      POUpVa5/sEPZOLMphCzXeeW1AoGBANFU/Keh+fy3AKwLp7ZJAiaAqa3bAYT2w2g+
-      A3YvJHGCZONTgK7QqOHsAoMPclmjn+uSGGQiudeH3K1HfSb7fMI/E2P8aGqSgzS2
-      KShivz27mA77PwwRDIt/JEbh1orEC+MxLu0uwRDMqvZ4IrTv2o9lc6ennRZjAkcF
-      t/KlhvPJAoGANKU5ESVVYjTGc1tz8ciC0ZH9YhGWGqT0TyrfKZktktNeVbEPM0wJ
-      49LSLMgE6MLoMvhKM+j52tWYG0zPnc0tw1gtnn6oaJrHA1Y0gdnBqX2OZ6u77rXF
-      h3iQNvWXh0hEBsKtXrDFTl5/ThHK6FwKBHYcSPToRX/NXODbwyQwaJs=
-      -----END RSA PRIVATE KEY-----
-

@@ -50,6 +50,12 @@ jobs:
         run: |
           ansible-galaxy role install -r requirements.yml
 
+      - name: Create .ansible_vault_key
+        run: |
+          touch .ansible_vault_key
+          chmod 600 .ansible_vault_key
+          echo ${{ secret.ANSIBLE_VAULT_KEY }} > .ansible_vault_key
+
       - name: Run vagrant
         run: |
           vagrant up

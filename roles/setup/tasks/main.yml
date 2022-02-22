@@ -7,3 +7,9 @@
   ansible.builtin.pkgng:
     name: git-lite
     state: present
+
+- name: Include encrypted variables
+  ansible.builtin.include_vars:
+    dir: ../../
+    file: secret.yml
+

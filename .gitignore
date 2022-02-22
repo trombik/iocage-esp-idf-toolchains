@@ -1,2 +1,4 @@
 /.vagrant
+/.ansible_vault_key
 *.swp
+*.key
