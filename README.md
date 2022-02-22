@@ -51,3 +51,8 @@ To destroy the VM, run:
 ```console
 vagrant destroy
 ```
+
+# Maintaining packages
+
+`project_ports_branch` should be updated to the latest quarterly branch at
+each quarterly.
