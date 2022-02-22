@@ -52,7 +52,40 @@ To destroy the VM, run:
 vagrant destroy
 ```
 
-# Maintaining packages
+## Maintaining packages
 
 `project_ports_branch` should be updated to the latest quarterly branch at
 each quarterly.
+
+## Signing key
+
+The key to sign packages is defined in `poudriere_pkg_repo_signing_key`
+variable, which is loaded from [`secret.yml`](secret.yml) during the play.
+`secret.yml` is encrypted by `ansible-vault`. The `ansible-vault` password
+must be in `.ansible_vault_key` file, which is not kept in the git repository
+for obvious reasons.
+
+If you are a maintainer, create `.ansible_vault_key` file after cloning the
+repository.
+
+```console
+touch .ansible_vault_key
+chmod 600 .ansible_vault_key
+vi .ansible_vault_key
+```
+
+To edit `secret.yml`, use `ansible-vault`.
+
+```console
+ansible-vault edit secret.yml
+```
+
+If you have your own `ANSIBLE_VAULT_PASSWORD_FILE` environment variable
+defined in your shell, make sure to `unset` `ANSIBLE_VAULT_PASSWORD_FILE`.
+
+```console
+env -u ANSIBLE_VAULT_PASSWORD_FILE ansible-vault edit secret.yml
+```
+
+The `ansible-vault` password must be set in `Settings` > `Secrets` >
+`Actions`. Create a `Repository secrets` with name `ANSIBLE_VAULT_KEY`.
