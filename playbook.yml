@@ -10,6 +10,7 @@
     - name: trombik.openntpd
     - name: setup
     - name: trombik.poudriere
+    - name: trombik.nginx
     - name: build
 
   vars:
@@ -80,3 +81,43 @@
         method: http
         version: 12.3-RELEASE
         state: present
+
+    # _____________________________nginx
+    nginx_config: |
+      worker_processes 1;
+      error_log {{ nginx_error_log_file }};
+      events {
+        worker_connections 1024;
+      }
+      http {
+        include {{ nginx_conf_dir }}/mime.types;
+        types {
+          text/plain log;
+        }
+        access_log {{ nginx_access_log_file }};
+        default_type application/octet-stream;
+        sendfile on;
+        keepalive_timeout 65;
+        gzip on;
+        gzip_types text/plain application/json text/css application/javascript;
+        server {
+          listen 80;
+          server_name localhost;
+
+          location / {
+            root /usr/local/share/poudriere/html;
+            index index.html index.htm;
+            autoindex on;
+          }
+
+          location /data {
+            alias /usr/local/poudriere/data/logs/bulk;
+            autoindex on;
+          }
+
+          error_page 500 502 503 504 /50x.html;
+          location = /50x.html {
+            root /usr/local/www/nginx-dist;
+          }
+        }
+      }

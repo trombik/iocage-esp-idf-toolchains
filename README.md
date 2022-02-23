@@ -89,3 +89,9 @@ env -u ANSIBLE_VAULT_PASSWORD_FILE ansible-vault edit secret.yml
 
 The `ansible-vault` password must be set in `Settings` > `Secrets` >
 `Actions`. Create a `Repository secrets` with name `ANSIBLE_VAULT_KEY`.
+
+## `poudriere` web interface
+
+`nginx` runs on `localhost` port 80. The port on the guest machine is
+forwarded to port 8000 on the host machine. To see build status and packages,
+visit http://localhost:8000/.

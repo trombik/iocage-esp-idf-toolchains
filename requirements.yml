@@ -4,3 +4,5 @@ roles:
     version: 1.0.2
   - name: trombik.poudriere
     version: 1.5.2
+  - name: trombik.nginx
+    version: 1.4.0
