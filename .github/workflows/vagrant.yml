@@ -1,5 +1,5 @@
 ---
-name: molecule
+name: vagrant
 on:
   - pull_request
   - push
